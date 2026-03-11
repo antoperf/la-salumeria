@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La Salumeria Malta — Authentic Italian Deli in Hamrun | Order on Wolt</title>
+<meta name="description" content="Fresh Italian cold cuts, cheeses, panini, and deli products in Malta. Prosciutto, burrata, pecorino, artisan pasta. Order delivery on Wolt from La Salumeria Hamrun."/>
+<meta name="keywords" content="Italian deli Malta, salumeria Malta, Italian food delivery Malta, prosciutto Malta, burrata Malta, Italian cheese Malta, panini Hamrun, Wolt Malta deli"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#556B2F",
+                    "primary-dark": "#3d4d22",
+                    "accent-terracotta": "#C65D3E",
+                    "background-light": "#f7f7f6",
+                    "background-dark": "#1a1d15",
+                    "neutral-soft": "#eef0ea",
+                    "neutral-muted": "#778462",
+                },
+                fontFamily: {
+                    "display": ["Work Sans", "sans-serif"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+</script>
+<style>
+    body { font-family: "Work Sans", sans-serif; scroll-behavior: smooth; }
+    .rustic-border { border-color: rgba(84, 106, 47, 0.1); }
+    /* Quiz transitions */
+    .quiz-step { display: none; animation: fadeIn 0.3s ease; }
+    .quiz-step.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .quiz-option { cursor: pointer; transition: all 0.2s; }
+    .quiz-option:hover { background: #556B2F; color: white; }
+    .quiz-option.selected { background: #556B2F; color: white; }
+</style>
+</head>
+<body class="bg-background-light text-slate-900 antialiased">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 bg-background-light/90 backdrop-blur-md border-b border-neutral-soft px-4 md:px-10 lg:px-20 py-4">
+<div class="max-w-[1200px] mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<h2 class="text-primary text-xl font-bold tracking-tight">La Salumeria</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#story">Our Story</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#products">Products</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#quiz">Quiz</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#location">Find Us</a>
+</nav>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-sm">
+    Order on Wolt
+</a>
+</div>
+</header>
+
+<main class="max-w-[1200px] mx-auto px-4 md:px-10 lg:px-20">
+
+<!-- Hero Section -->
+<section class="py-12 md:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-8">
+<div class="space-y-4">
+<span class="text-accent-terracotta font-bold tracking-widest text-xs uppercase">Authentic Italian Experience</span>
+<h1 class="text-slate-900 text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+    La Salumeria — Authentic Italian Deli in Malta
+</h1>
+<p class="text-lg text-neutral-muted leading-relaxed max-w-lg">
+    Handpicked Italian meats, cheeses, and panini. Delivered to your door.
+</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-primary text-white h-14 px-8 rounded-lg font-bold text-lg hover:scale-[1.02] transition-transform flex items-center">
+    Order on Wolt
+</a>
+<a href="#quiz" class="bg-neutral-soft text-slate-900 h-14 px-8 rounded-lg font-bold text-lg hover:bg-neutral-soft/80 transition-colors flex items-center">
+    Take the Quiz — Find Your Panino
+</a>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdWsnhiqkgxEBZ7fLS2B_wYnQnDQo22yU8z40sWr9t_wZnrXPe3-rrRmXDOF0CfiJgCL3NKg6cCAT1rA8WEMy2etZGC2IFcDKbQCzfy80y5Yq1jcynuODIKvqpCZzfSXDu2-hLSbwdotvErRFbCgVCCmn-GvN7VgfrVw_2JMkJOH5-M_f_RbbZ27uReOzhLZnOwtoj2ijO5gFWtJYeG8eub-mlgLl_6dw66hRWPd2Ys_t8ke10GhJF9vZXapQwCvLEnm9mz9clNL8');"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="py-16 border-y border-neutral-soft" id="story">
+<div class="max-w-3xl mx-auto text-center space-y-6">
+<h2 class="text-3xl md:text-4xl font-bold tracking-tight">A Taste of Italy in Hamrun</h2>
+<p class="text-lg text-neutral-muted leading-relaxed">
+    We source directly from Italian producers — from 18-month San Daniele prosciutto to hand-pulled burrata, Pecorino Romano DOP, and artisan pasta from Campania. Every product is selected for authenticity and quality. Whether you're building a tagliere at home or grabbing a freshly made panino, La Salumeria brings the real Italian salumeria experience to Malta.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 text-left">
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+<h3 class="font-bold">Direct Sourcing</h3>
+<p class="text-sm text-neutral-muted">Working closely with family-run farms across the Italian regions.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl">menu_book</span>
+<h3 class="font-bold">Authentic Recipes</h3>
+<p class="text-sm text-neutral-muted">Traditional curing and preparation methods passed down through generations.</p>
+</div>
+<div class="space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl">eco</span>
+<h3 class="font-bold">Daily Freshness</h3>
+<p class="text-sm text-neutral-muted">Fresh panini and premium meats sliced specifically for your order.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Featured Products -->
+<section class="py-16" id="products">
+<div class="flex justify-between items-end mb-10">
+<div>
+<span class="text-accent-terracotta font-bold text-xs uppercase">Curated Selection</span>
+<h2 class="text-3xl font-bold mt-1">Featured Products</h2>
+</div>
+<a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline" href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank">View All Menu <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- Product 1: Il Mortazza -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDACd5VO9rkpA0C4r1xooPiB4QhAtPCxsEBxY7u9m40q1dYfESj-ZF9qC0IeprBf7Ux4ikZc-NFxgVxr0By1Shqz8EZn9YSQ-Ukx0VhWGprcuBZaIYgbR9lGtmxu_jwJDjtS5ERkq18Vk7qoIeUCBat2QfZQ8nFWVMoLNDR_PZE6EYlx0CKSLWwt4D_uMhfe005euR2MC9hxoKz13ym9Fg6zzjdpe5cxuOScdAvSjOqed50jucDE6dvNa8T71v-89hOVPz1X1Y8G8E');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Il Mortazza</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;8.50</span>
+</div>
+<p class="text-neutral-muted text-sm">Mortadella pistacchiosa with fresh mozzarella on toasted ciabatta with Puglian olive oil.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+<!-- Product 2: Il Calabrese Piccante -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpXSDz9C7IBzWE5r6OJTLya8E3brjy-S8QmEWqH4zjfHCnXs0K86jZ5D2wk-Vupxgi8bRcNbojV8YhX8PPYWkThwhWUu0VLVy-kIQHL0u0-piq8XvbHjMg4AS46L51uqVMZSP79UiHaK9a31GjSaixUkaoZMLETOBxt7bwA8FaTij6If0YKH6y7GgtaD8REfx7haT10arEqEHH2qw2QEVEiB_rPqJ2RDYJMb5zETXrdlzz5UHTeWa8exueQR8MzIjet-UxN_xKRaI');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Il Calabrese Piccante</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;9.50</span>
+</div>
+<p class="text-neutral-muted text-sm">Spianata calabra piccante, nduja, provolone. Bold and spicy.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+<!-- Product 3: Il Toscano -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCaAvzLJUjM0SF5BzzP9vY_GvhF00dZCD2XpDTJTCkspIMgtiaL3kN_iBF8BrRFs--wPM_R0ZgjdFN_-dMWMek7dIgvWF7m8cR5qQeVSbq30tvFyvaYW8RdORM5DGVWVo6KEv0yPOZxpqKIFjt0rnfixybWQY3_MzuYZ-gBkZQRzygXyQvGSqSDV9xxXVMBayU9sHPlYYV77qXCW-thMBfb77TtNRKmC-mNvgoZOlFu_3NSB4ohGl9hUQjT01mzEqv1SPLEwfIwiNE');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Il Toscano</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;9.50</span>
+</div>
+<p class="text-neutral-muted text-sm">Finocchiona toscana, pecorino, sundried tomato. Classic Tuscan flavors.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+<!-- Product 4: Prosciutto Crudo -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBerkVXRKLY-wGraiwCCVhBRTLSvblLzWNODqMI3RSzxu0QXqkpGr2ZEZZWZe-w2nhzrfjuW-m9pelDPhAl7LRdTqmnjyQ8XiU0fX5bqwwU_t8LEBIm1Dt3-k4glvOXIxt4YAPo01bk0dCJs_c6Xq8fqUqRnKPIR4JIHfDL5It7jYgxa0pYPgFYCU_tbRdF5O44SYwR4jGhZNb1tu0MPXMHeZwH6WnqLIRN8_vBK4MMgoO2pJy679gJNI6Gjdft3G9EpxajThCiSBA');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Prosciutto Crudo San Daniele</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;3.49/100g</span>
+</div>
+<p class="text-neutral-muted text-sm">Aged 18 months. Sweet, delicate, melt-in-your-mouth. The king of prosciutto.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+<!-- Product 5: Burrata -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxBJ5DBZ4tW9Xewxfkpecjsz0hcCtGnt6Yq0VbCZjKqkxQCrvrdP0PrMeZKD_XxzUvVsawVc_yDELqTp38DamLCtLsa-nl-Ytl_oTAzyXiWDqPsfgLcFkUMe7sss57-_bA-kJ1Ge4l_UUFBd6WyQXk1z7aO1xOiHtJ-I8x5L0jsQrvd_mVXMA6nqc9o5NlCDwraeWS5nnu-t3-UhXMRGCRgylE8NvEWwiuwbvae63hdUkT4XMy91M1M7ZKHb8RjmXwkZ6oxoJle9w');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Burrata 125g</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;3.60</span>
+</div>
+<p class="text-neutral-muted text-sm">Fresh, creamy burrata. Perfect with our sundried tomatoes or on its own.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+<!-- Product 6: Pecorino Romano -->
+<div class="group bg-white rounded-xl p-4 rustic-border border transition-all hover:shadow-lg">
+<div class="aspect-square rounded-lg overflow-hidden mb-4 relative">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwWS_YJFrcXpvX-Tc6drogX-ky0-EpEhK_oQJchjAK3PcCG7_HDkS5OUXFvRWE1nAVANGLT2ygajBZqyFyziTM01TRbIisKCIDK3rPNPBCqucrE8Gw3FE-r1m5lzT7AJ45JfvNnINudAFwtQ0M71dbVMN2ndZUFCDKiHI5-IEi-kucSMRNr4sZPLN280cOcNtbB4ZTu0XbFD8z8bxyIKEMayCxOK5RlnhDwBl23chYEdIn7Y47jgTHuTDiF43nSskQeWAiEjTT-Qc');"></div>
+</div>
+<div class="space-y-1 mb-4">
+<div class="flex justify-between items-start">
+<h3 class="font-bold text-lg">Pecorino Romano DOP</h3>
+<span class="text-accent-terracotta font-bold text-sm">&euro;3.79/100g</span>
+</div>
+<p class="text-neutral-muted text-sm">Sharp, salty, aged sheep's milk cheese from Lazio. Essential for pasta and boards.</p>
+</div>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="block w-full bg-primary/10 text-primary hover:bg-primary hover:text-white py-2 rounded-lg font-bold text-sm transition-colors text-center">Order on Wolt</a>
+</div>
+
+</div>
+</section>
+
+<!-- Quiz Section -->
+<section class="py-16" id="quiz">
+<div class="bg-primary/5 rounded-3xl p-8 md:p-12 border-2 border-dashed border-primary/20">
+
+<!-- Quiz Intro -->
+<div id="quiz-intro" class="text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">quiz</span>
+<h2 class="text-3xl font-bold mb-4">What Should You Order?</h2>
+<p class="text-neutral-muted text-lg max-w-xl mx-auto mb-8">
+    Answer 4 quick questions. We'll match you to your perfect Italian bite.
+</p>
+<button onclick="startQuiz()" class="bg-primary text-white h-14 px-10 rounded-full font-bold text-lg hover:bg-primary-dark transition-colors">
+    Start the Quiz
+</button>
+</div>
+
+<!-- Quiz Questions -->
+<div id="quiz-questions" class="hidden max-w-lg mx-auto">
+<!-- Progress Bar -->
+<div class="mb-8">
+<div class="flex justify-between text-xs text-neutral-muted mb-2">
+<span>Question <span id="quiz-current">1</span> of 4</span>
+<span id="quiz-percent">25%</span>
+</div>
+<div class="h-2 bg-neutral-soft rounded-full overflow-hidden">
+<div id="quiz-progress" class="h-full bg-primary rounded-full transition-all duration-500" style="width: 25%"></div>
+</div>
+</div>
+
+<!-- Q1 -->
+<div class="quiz-step active" data-step="1">
+<h3 class="text-xl font-bold mb-6 text-center">How hungry are you?</h3>
+<div class="space-y-3">
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(1, 'snack')">Just a snack</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(1, 'lunch')">A proper lunch</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(1, 'starving')">I could eat a whole salumeria</button>
+</div>
+</div>
+
+<!-- Q2 -->
+<div class="quiz-step" data-step="2">
+<h3 class="text-xl font-bold mb-6 text-center">What's your flavor mood?</h3>
+<div class="space-y-3">
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(2, 'classic')">Classic Italian — timeless, clean flavors</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(2, 'bold')">Bold &amp; Spicy — bring the heat</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(2, 'rich')">Rich &amp; Creamy — indulgent and comforting</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(2, 'fresh')">Fresh &amp; Light — keep it simple</button>
+</div>
+</div>
+
+<!-- Q3 -->
+<div class="quiz-step" data-step="3">
+<h3 class="text-xl font-bold mb-6 text-center">Pick your protein:</h3>
+<div class="space-y-3">
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(3, 'prosciutto')">Prosciutto Crudo</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(3, 'mortadella')">Mortadella</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(3, 'speck')">Speck</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(3, 'salame')">Salame</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(3, 'nomeat')">No meat — cheese or veggie</button>
+</div>
+</div>
+
+<!-- Q4 -->
+<div class="quiz-step" data-step="4">
+<h3 class="text-xl font-bold mb-6 text-center">How do you feel about cheese?</h3>
+<div class="space-y-3">
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(4, 'lots')">The more the better</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(4, 'some')">A little goes a long way</button>
+<button class="quiz-option w-full py-4 border rustic-border rounded-xl text-sm font-medium" onclick="answer(4, 'none')">I'll skip it</button>
+</div>
+</div>
+</div>
+
+<!-- Quiz Result -->
+<div id="quiz-result" class="hidden text-center max-w-lg mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">restaurant_menu</span>
+<h3 class="text-sm text-accent-terracotta font-bold uppercase tracking-widest mb-2">Your Perfect Match</h3>
+<h2 id="result-name" class="text-3xl font-bold mb-1"></h2>
+<p id="result-price" class="text-accent-terracotta font-bold text-lg mb-4"></p>
+<p id="result-desc" class="text-neutral-muted text-lg mb-2"></p>
+<p id="result-why" class="text-sm italic text-slate-500 mb-8"></p>
+<div class="flex flex-col sm:flex-row gap-3 justify-center">
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-primary text-white h-14 px-10 rounded-full font-bold text-lg hover:bg-primary-dark transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span> Order on Wolt
+</a>
+<button onclick="retakeQuiz()" class="bg-neutral-soft text-slate-900 h-14 px-8 rounded-full font-bold text-lg hover:bg-neutral-soft/80 transition-colors">
+Retake Quiz
+</button>
+</div>
+<p class="text-sm text-neutral-muted mt-6">Or <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-primary font-bold underline">explore our full menu on Wolt</a></p>
+</div>
+
+</div>
+</section>
+
+<!-- Deli Categories -->
+<section class="py-16">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold">Explore Our Italian Deli</h2>
+<p class="text-neutral-muted mt-2">Over 200 products sourced from Italy. Delivered via Wolt.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGe9pgh4GvBr-L3ysIGQi_8P7vBwA__gXm-D6ar_VYignh2QozGjI8-uqv8pq_vTtk3byxTQqqiaDZ8YZEaIJdWgpp6R4Yo9b7a16CSp_i8nuqdOJieGpbWwd9NI8Z2VuOxuKMSIMLEMaDS-7aos2BH5Rrwb8_-FN9FeSJJpg2HpkggBASAfJEK8zBZ-BOQfZ8qPLANzNxb8oIjEh4zg-4uN75dWBEXEMMk6mYd4dy79yGAwpQgAkT9LEB901LqEG-kJa6m0tFOPo');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Cold Cuts</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">Prosciutto, Speck, Guanciale, Bresaola &amp; 40+ salumi</p>
+</div>
+</a>
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaGhZ5B4pQLokj3p_kd_CL2T6OM2un7U9OJmz7QIhJPqe2fCSeGd4Zgo39LuVZdBy0mpgKva6TDA-78cv8ZLvNRr4uHHpm_v0UfWLT73eH9ZjufyGFQ1bndE9sYhlnmhTknzVl8yWecpSSQtX973M1UXvktIR8LdgnPeNRS31F5ZwFPcQgNVh5adSTjhMjWz5ZpiTtxWQ-LpDvqFNNxZCy0vsvj7WYV9awR1NYsfewQL0sDQ5E8jtnq0kkn566MhKXFnjani8FWYk');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Cheeses</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">Burrata, Mozzarella di Bufala, Parmigiano Reggiano 36 Mesi</p>
+</div>
+</a>
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDVVZXriLtdPT6q7td4-I4VuFl95fw7lztz03rejkhsh7OXNiidPdEoS2OwO9swjmXum5e8XObNCu98SACobha6Ydc-4WcycdSp6tDoWXE3HjJn69lNH2x3KIC_ibDNcYEgljsexzdQDbcUiqf8_GxvIjOSaiPVZ9bNbhHE1HlLMqwecxKVFZwsmXfToVPZKRpjUZk8nvwgDCkJ8GXol0sZgeV6cMsXH3sQ5bJURnAT_0xHVtXYifVHlAa-_N0GMDyGgjNZaXkLM3M');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Panini</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">12 signature combos on toasted ciabatta with Puglian olive oil</p>
+</div>
+</a>
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuPsL8WQK4n7WILAB1vU6LkNm6xToCGpRvzRZlI3dPrCGD87tPZCUUxtj_lglrBKeoXIIOlFozAT1nqGZ4nykNhE3o2F-KTrkWzH_DRiyaVnzLSjeIqWo0DNu7vks-xong-YCRfQQj8udY-Vm_f_oV1uM26QX5xYu9A0FpUvjv8G9D7xXhXaFnHAaOmjcQMWFW_R1ziCzQAR2x4An-JVLrYrmcA66TfJhK0EnbsSPmD6cbkHg1xN6tIP-HmUdZfMql5cpia2ZTaZg');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Pasta</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">Artisan pasta from Pastificio Irpini — from &euro;3.00</p>
+</div>
+</a>
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDzDWYPxY7yagM3ytNLH0D01bSt-2pLyRmq8WWajT3TKfp-PczcbgvfkaCNfSWONe9n6OGsYqSujuavFpfRlrUbUIvZkPmwUpsc8HCzzOZQI5NT02oADzzjNwA5Ih0fTQB9k4exe4bMAa0k0gmuU44M0dSbTaFgh051QXpCBtcIxm9SgHzEeLAQUDb0b0XhxyGV06KYJh86G1PYwDmMhtU-YnUREKdw1piXip_Grxb3RDHdov6kHj6ohvEnqVQ8Egwg1RTlIZMluq8');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Sott'oli &amp; Antipasti</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">Olives, artichokes, sundried tomatoes, stuffed pepperoncini</p>
+</div>
+</a>
+
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer block">
+<div class="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCINNfPYKLVefHVvhV-CNFLY_Vhli4dH76zV-hUez3ahkgZehxfjrpE1k75VR8Xi9uip1RfPZ-0aklJkRiV8Ezvp0r6UG-trOQ3raLbBbOOTldbbf2PsCU_0rFyOJ7Ifs7fLJ68_SFhqVlraKVSWhiI9o0WoHW7oPCObmb1Hj71RdQoY7H0GIteRM7wLNDjXTgBmID9AaH3BPFzHUSI3lKmNKCATH8F-DelkDNysZenmrucCDt_BpJB6siKVnkgAjC-xs5AhUL3Q8Q');"></div>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+<div class="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+<h3 class="text-white text-xl font-bold">Taralli &amp; Biscuits</h3>
+<p class="text-white/70 text-xs mt-1 hidden md:block">Pugliese taralli in 12+ flavors, cantuccini, artisan biscotti</p>
+</div>
+</a>
+
+</div>
+</section>
+
+<!-- Social Proof -->
+<section class="py-16">
+<h2 class="text-3xl font-bold text-center mb-12">What People Love</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-neutral-soft p-6 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="italic text-slate-700 mb-4">"Best Italian deli on the island. The mortadella is unreal."</p>
+<p class="font-bold text-sm">— Google Review</p>
+</div>
+<div class="bg-neutral-soft p-6 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="italic text-slate-700 mb-4">"Finally real Italian products in Malta. Ordering weekly."</p>
+<p class="font-bold text-sm">— Wolt Customer</p>
+</div>
+<div class="bg-neutral-soft p-6 rounded-2xl relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-4">format_quote</span>
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<p class="italic text-slate-700 mb-4">"The panini are next level. Il Mortazza is my go-to."</p>
+<p class="font-bold text-sm">— Instagram</p>
+</div>
+</div>
+</section>
+
+<!-- Location & Contact -->
+<section class="py-16" id="location">
+<div class="bg-white rounded-3xl overflow-hidden rustic-border border shadow-lg flex flex-col md:flex-row">
+<div class="flex-1 p-8 md:p-12 space-y-6">
+<div>
+<span class="text-accent-terracotta font-bold text-xs uppercase tracking-widest">Storefront</span>
+<h2 class="text-3xl font-bold mt-1">Visit Us in Hamrun</h2>
+</div>
+<div class="space-y-4">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-bold">Address</p>
+<p class="text-neutral-muted">Triq Guze Maria Camilleri, Hamrun, Malta</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-bold">Opening Hours</p>
+<p class="text-neutral-muted">Monday – Saturday: 09:30 – 19:00<br/>Sunday: Closed</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-bold">Phone</p>
+<p class="text-neutral-muted"><a href="tel:+35627039005" class="hover:text-primary transition-colors">2703 9005</a></p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3">
+<a href="https://www.google.com/maps/search/La+Salumeria+Hamrun+Malta" target="_blank" class="bg-primary text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-primary-dark transition-colors">
+<span class="material-symbols-outlined">map</span> Open in Google Maps
+</a>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-neutral-soft text-slate-900 px-6 py-3 rounded-lg font-bold flex items-center gap-2 hover:bg-neutral-soft/80 transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span> Order on Wolt
+</a>
+</div>
+</div>
+<div class="flex-1 min-h-[300px] relative">
+<div class="absolute inset-0 bg-neutral-soft flex items-center justify-center overflow-hidden">
+<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBsQCqSujan3Tp99oq_wl5oeeT_85Y34hD8klXUFF1a1GDzSK4P7qTDmxdWbzmZEduRkkGNCvm2fcsP19zy3Sj7R18VDaw9V7pmFZ56Ij2_FDLveWPLg0fadipuvDzYtogfbpIE0jpaKfallSvQdco_9wkkg_GfA7-v8I8-fRJOX7a_4Tdse_O2aTniX1TuxS3BFIpWSoJqpXwrAmw65AyotpVN_M95yAaRXOD2dM4OMqfgYixkCZaD5DlijtDwgTTzfsOEg4aK2cU');"></div>
+<div class="absolute bg-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-background-light py-12 px-4 md:px-10 lg:px-20 border-t border-neutral-soft">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+<h2 class="text-primary text-xl font-bold tracking-tight">La Salumeria</h2>
+</div>
+<div class="flex gap-8 text-sm font-medium text-neutral-muted">
+<a class="hover:text-primary transition-colors" href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank">Order on Wolt</a>
+<a class="hover:text-primary transition-colors" href="tel:+35627039005">2703 9005</a>
+<a class="hover:text-primary transition-colors" href="#location">Find Us</a>
+</div>
+</div>
+<div class="mt-12 text-center text-xs text-neutral-muted">
+    &copy; 2025 La Salumeria Malta. All rights reserved. Authentic Italian flavors.
+</div>
+</div>
+</footer>
+
+<!-- Sticky Mobile Button -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-sm md:hidden">
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="w-full bg-primary shadow-xl text-white py-4 rounded-full font-bold text-lg flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+Order on Wolt Now
+</a>
+</div>
+
+<!-- Quiz Logic -->
+<script>
+const WOLT = 'https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun';
+let answers = {};
+
+function startQuiz() {
+    document.getElementById('quiz-intro').classList.add('hidden');
+    document.getElementById('quiz-questions').classList.remove('hidden');
+    document.getElementById('quiz-result').classList.add('hidden');
+    answers = {};
+    showStep(1);
+}
+
+function retakeQuiz() {
+    document.getElementById('quiz-result').classList.add('hidden');
+    document.getElementById('quiz-intro').classList.remove('hidden');
+    document.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+    answers = {};
+}
+
+function showStep(n) {
+    document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+    const step = document.querySelector(`.quiz-step[data-step="${n}"]`);
+    if (step) step.classList.add('active');
+    document.getElementById('quiz-current').textContent = n;
+    document.getElementById('quiz-percent').textContent = (n * 25) + '%';
+    document.getElementById('quiz-progress').style.width = (n * 25) + '%';
+}
+
+function answer(q, val) {
+    answers[q] = val;
+    // Highlight selected
+    const step = document.querySelector(`.quiz-step[data-step="${q}"]`);
+    step.querySelectorAll('.quiz-option').forEach(b => b.classList.remove('selected'));
+    event.target.classList.add('selected');
+
+    setTimeout(() => {
+        if (q < 4) {
+            showStep(q + 1);
+        } else {
+            showResult();
+        }
+    }, 300);
+}
+
+function showResult() {
+    document.getElementById('quiz-questions').classList.add('hidden');
+    document.getElementById('quiz-result').classList.remove('hidden');
+
+    const hunger = answers[1];
+    const flavor = answers[2];
+    const protein = answers[3];
+    const cheese = answers[4];
+
+    let result;
+
+    // Snack → recommend deli items
+    if (hunger === 'snack') {
+        result = {
+            name: 'Burrata or Italian Cold Cuts',
+            price: 'from \u20AC3.49',
+            desc: 'Fresh burrata (\u20AC3.60) or our premium cold cuts — perfect for a light Italian snack.',
+            why: 'A light bite is all you need. Browse our full deli selection!'
+        };
+    }
+    // Bold + Salame + Cheese = Calabrese
+    else if (flavor === 'bold' && protein === 'salame' && cheese !== 'none') {
+        result = {
+            name: 'Il Calabrese Piccante',
+            price: '\u20AC9.50',
+            desc: 'Spianata calabra, nduja, provolone. Southern Italian fire in every bite.',
+            why: 'You love bold flavors and salame — this is your spicy soulmate.'
+        };
+    }
+    // Bold + Any + Starving = Porcone
+    else if (flavor === 'bold' && hunger === 'starving') {
+        result = {
+            name: 'Il Porcone',
+            price: '\u20AC9.50',
+            desc: 'Loaded with Italian meats and cheese. For serious appetites only.',
+            why: 'Big hunger + bold flavor = the ultimate loaded panino.'
+        };
+    }
+    // Rich + Mortadella + Lots of cheese = Mortazza
+    else if (flavor === 'rich' && protein === 'mortadella' && cheese === 'lots') {
+        result = {
+            name: 'Il Mortazza',
+            price: '\u20AC8.50',
+            desc: 'Mortadella pistacchiosa with creamy mozzarella. Pure comfort, pure Italy.',
+            why: 'Rich, creamy, cheesy — this was made for you.'
+        };
+    }
+    // Fresh + No meat = Vegetariano
+    else if (flavor === 'fresh' && protein === 'nomeat') {
+        result = {
+            name: 'Il Vegetariano',
+            price: '\u20AC8.00',
+            desc: 'Fresh vegetables, Italian cheeses, olive oil on ciabatta. Light and satisfying.',
+            why: 'Fresh, light, no meat — a perfect veggie match.'
+        };
+    }
+    // Classic + Prosciutto + Cheese lover = Delicato
+    else if (flavor === 'classic' && protein === 'prosciutto' && cheese === 'lots') {
+        result = {
+            name: 'Il Delicato',
+            price: '\u20AC8.00',
+            desc: 'Prosciutto cotto, provolone dolce, on toasted ciabatta with Puglian olive oil. Clean, classic, perfect.',
+            why: 'Classic Italian taste with prosciutto and plenty of cheese.'
+        };
+    }
+    // Classic + Speck + Some cheese = Montanaro
+    else if (flavor === 'classic' && protein === 'speck' && cheese === 'some') {
+        result = {
+            name: 'Il Montanaro',
+            price: '\u20AC8.00',
+            desc: 'Speck del Cadore with mountain cheese. Alpine Italian soul.',
+            why: 'Speck + a touch of mountain cheese = alpine perfection.'
+        };
+    }
+    // Default = Toscano
+    else {
+        result = {
+            name: 'Il Toscano',
+            price: '\u20AC9.50',
+            desc: 'Finocchiona toscana, pecorino, sundried tomato. When in doubt, go Tuscan.',
+            why: 'A crowd-pleaser with classic Tuscan flavors. You can\'t go wrong.'
+        };
+    }
+
+    document.getElementById('result-name').textContent = result.name;
+    document.getElementById('result-price').textContent = result.price;
+    document.getElementById('result-desc').textContent = result.desc;
+    document.getElementById('result-why').textContent = result.why;
+}
+</script>
+
+</body></html>
