@@ -50,10 +50,10 @@
     @layer base {
         body {
             @apply bg-parchment text-wood-ink font-body;
-            background-image: url("./brick-texture.jpg");
-            background-size: 50%;
-            background-repeat: repeat;
-            background-attachment: fixed;
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("./brick-texture.jpg");
+            background-size: auto, 50%;
+            background-repeat: no-repeat, repeat;
+            background-attachment: fixed, fixed;
         }
     }
     .woodcut-border {
@@ -516,7 +516,7 @@
 
 <!-- Sticky Mobile Button -->
 <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-sm md:hidden">
-<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="stamp-btn w-full text-center text-lg flex items-center justify-center gap-2 !py-4">
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="stamp-btn w-full text-center text-lg flex items-center justify-center gap-2 !py-4 shadow-2xl">
 <span class="material-symbols-outlined">shopping_cart</span>
 Order on Wolt
 </a>
