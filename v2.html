@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>La Salumeria Malta — V2 Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                "nero": "#0a0a0a",
+                "smoke": "#1a1a1a",
+                "ash": "#2a2a2a",
+                "stone": "#8a8078",
+                "gold": "#c8a96e",
+                "ivory": "#f5f0e8",
+                "blood": "#8b1a1a",
+            },
+            fontFamily: {
+                "serif": ["Playfair Display", "Georgia", "serif"],
+                "sans": ["Inter", "system-ui", "sans-serif"],
+            },
+        },
+    },
+}
+</script>
+<style>
+@font-face {
+    font-family: 'Amsterdam Four';
+    src: url('./fonts/amsterdam-four.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+html { scroll-behavior: smooth; }
+body { background: #0a0a0a; color: #f5f0e8; }
+::selection { background: #c8a96e; color: #0a0a0a; }
+
+/* Smooth fade-in */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.8s ease-out both; }
+.fade-up-delay { animation: fadeUp 0.8s ease-out 0.2s both; }
+.fade-up-delay-2 { animation: fadeUp 0.8s ease-out 0.4s both; }
+
+/* Gold line animation */
+@keyframes lineGrow { from { width: 0; } to { width: 100%; } }
+.line-grow { animation: lineGrow 1.2s ease-out 0.6s both; }
+
+/* Hover image zoom */
+.img-zoom img { transition: transform 0.6s ease; }
+.img-zoom:hover img { transform: scale(1.05); }
+
+/* Horizontal scroll for products */
+.scroll-x { scrollbar-width: none; -ms-overflow-style: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+</style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+<!-- Nav -->
+<nav class="fixed top-0 w-full z-50 bg-nero/80 backdrop-blur-md border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="text-2xl md:text-3xl font-serif italic tracking-tight" style="font-family:'Amsterdam Four',serif;">La Salumeria</a>
+    <div class="hidden md:flex items-center gap-8 text-xs font-sans tracking-[0.2em] uppercase text-stone">
+        <a href="#products" class="hover:text-gold transition-colors">Products</a>
+        <a href="#story" class="hover:text-gold transition-colors">Our story</a>
+        <a href="#visit" class="hover:text-gold transition-colors">Visit</a>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-gold text-nero px-5 py-2 hover:bg-ivory transition-colors font-medium">Order</a>
+    </div>
+    <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="md:hidden bg-gold text-nero px-4 py-2 text-xs tracking-[0.15em] uppercase font-medium">Order</a>
+</div>
+</nav>
+
+<!-- Hero - Full Bleed Cinematic -->
+<section class="relative min-h-screen flex items-end pb-20 md:pb-32">
+<div class="absolute inset-0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9lJ6iirr9u5Kj4uFJXM-22tOKazAlCgGZaEU6AkpkAVpbo3Q-f6kgu5q9DX3Yw6IVDHdU4fRi6qcZAqpep7-HkwO3uHwZinK345FElFooENovFdB9bYylsOypaTCdxnq5rf3eqS6OivbBn0TkoDLd7khu_kgnbFjkorQpjNMToZX03YJLj5wgUDpg8B6s4BLfLPw5Ln6slAFddRb1DNY4yvooT34Sf7UCGtvNlMJDg4n09WC2h4tiBimy1X4D5HfdX1SWcYmf79o" alt="Italian deli" class="w-full h-full object-cover" fetchpriority="high"/>
+    <div class="absolute inset-0 bg-gradient-to-t from-nero via-nero/70 to-nero/30"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full">
+    <div class="max-w-2xl">
+        <p class="text-xs tracking-[0.3em] uppercase text-gold mb-6 fade-up">Hamrun, Malta</p>
+        <h1 class="text-5xl md:text-8xl font-serif leading-[0.95] mb-8 fade-up-delay">
+            The real<br/><em class="text-gold">Italian</em><br/>deli
+        </h1>
+        <p class="text-lg md:text-xl text-stone max-w-md leading-relaxed mb-10 fade-up-delay-2">
+            Handpicked meats, cheeses, and panini. Direct from family-run farms to your table.
+        </p>
+        <div class="flex flex-wrap gap-4 fade-up-delay-2">
+            <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-gold text-nero px-8 py-4 text-sm tracking-[0.15em] uppercase font-medium hover:bg-ivory transition-colors">Order on Wolt</a>
+            <a href="#products" class="border border-stone/40 text-stone px-8 py-4 text-sm tracking-[0.15em] uppercase hover:border-gold hover:text-gold transition-colors">Explore menu</a>
+        </div>
+    </div>
+</div>
+<!-- Scroll indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-stone/50">
+    <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+    <div class="w-px h-8 bg-gradient-to-b from-stone/50 to-transparent"></div>
+</div>
+</section>
+
+<!-- Marquee ribbon -->
+<div class="bg-gold text-nero py-3 overflow-hidden">
+<div class="flex whitespace-nowrap animate-[marquee_20s_linear_infinite]">
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Prosciutto San Daniele</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Burrata fresca</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Pecorino Romano DOP</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Mortadella pistacchiosa</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Spianata calabra</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Finocchiona toscana</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Prosciutto San Daniele</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Burrata fresca</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Pecorino Romano DOP</span>
+    <span class="text-gold/30 mx-2">&bull;</span>
+    <span class="text-xs tracking-[0.3em] uppercase font-medium mx-8">Mortadella pistacchiosa</span>
+</div>
+</div>
+<style>@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }</style>
+
+<!-- Products - Horizontal Scroll Cards -->
+<section class="py-24 md:py-32" id="products">
+<div class="max-w-7xl mx-auto px-6 mb-16">
+    <div class="flex items-end justify-between">
+        <div>
+            <p class="text-xs tracking-[0.3em] uppercase text-gold mb-4">What we offer</p>
+            <h2 class="text-4xl md:text-6xl font-serif">Our selection</h2>
+        </div>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="hidden md:block text-sm text-stone hover:text-gold transition-colors tracking-[0.15em] uppercase">Full menu &rarr;</a>
+    </div>
+    <div class="h-px bg-gradient-to-r from-gold/50 via-gold/20 to-transparent mt-8"></div>
+</div>
+
+<!-- Panini Row -->
+<div class="max-w-7xl mx-auto px-6 mb-6">
+    <p class="text-xs tracking-[0.3em] uppercase text-stone mb-8">Panini</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 max-w-7xl mx-auto px-6">
+    <!-- Mortazza -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDACd5VO9rkpA0C4r1xooPiB4QhAtPCxsEBxY7u9m40q1dYfESj-ZF9qC0IeprBf7Ux4ikZc-NFxgVxr0By1Shqz8EZn9YSQ-Ukx0VhWGprcuBZaIYgbR9lGtmxu_jwJDjtS5ERkq18Vk7qoIeUCBat2QfZQ8nFWVMoLNDR_PZE6EYlx0CKSLWwt4D_uMhfe005euR2MC9hxoKz13ym9Fg6zzjdpe5cxuOScdAvSjOqed50jucDE6dvNa8T71v-89hOVPz1X1Y8G8E" alt="Il Mortazza" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Il Mortazza</h3>
+            <span class="text-gold font-sans text-sm">&euro;8.50</span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">Mortadella pistacchiosa, fresh mozzarella, toasted ciabatta, Puglian olive oil.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+    <!-- Calabrese -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpXSDz9C7IBzWE5r6OJTLya8E3brjy-S8QmEWqH4zjfHCnXs0K86jZ5D2wk-Vupxgi8bRcNbojV8YhX8PPYWkThwhWUu0VLVy-kIQHL0u0-piq8XvbHjMg4AS46L51uqVMZSP79UiHaK9a31GjSaixUkaoZMLETOBxt7bwA8FaTij6If0YKH6y7GgtaD8REfx7haT10arEqEHH2qw2QEVEiB_rPqJ2RDYJMb5zETXrdlzz5UHTeWa8exueQR8MzIjet-UxN_xKRaI" alt="Calabrese" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Calabrese</h3>
+            <span class="text-gold font-sans text-sm">&euro;9.50</span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">Spianata calabra piccante, nduja, provolone. Bold southern fire.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+    <!-- Toscano -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaAvzLJUjM0SF5BzzP9vY_GvhF00dZCD2XpDTJTCkspIMgtiaL3kN_iBF8BrRFs--wPM_R0ZgjdFN_-dMWMek7dIgvWF7m8cR5qQeVSbq30tvFyvaYW8RdORM5DGVWVo6KEv0yPOZxpqKIFjt0rnfixybWQY3_MzuYZ-gBkZQRzygXyQvGSqSDV9xxXVMBayU9sHPlYYV77qXCW-thMBfb77TtNRKmC-mNvgoZOlFu_3NSB4ohGl9hUQjT01mzEqv1SPLEwfIwiNE" alt="Il Toscano" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Il Toscano</h3>
+            <span class="text-gold font-sans text-sm">&euro;9.50</span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">Finocchiona toscana, pecorino, sundried tomato. Classic Tuscan.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+</div>
+
+<!-- Deli Row -->
+<div class="max-w-7xl mx-auto px-6 mt-16 mb-6">
+    <p class="text-xs tracking-[0.3em] uppercase text-stone mb-8">From the counter</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 max-w-7xl mx-auto px-6">
+    <!-- Prosciutto -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBerkVXRKLY-wGraiwCCVhBRTLSvblLzWNODqMI3RSzxu0QXqkpGr2ZEZZWZe-w2nhzrfjuW-m9pelDPhAl7LRdTqmnjyQ8XiU0fX5bqwwU_t8LEBIm1Dt3-k4glvOXIxt4YAPo01bk0dCJs_c6Xq8fqUqRnKPIR4JIHfDL5It7jYgxa0pYPgFYCU_tbRdF5O44SYwR4jGhZNb1tu0MPXMHeZwH6WnqLIRN8_vBK4MMgoO2pJy679gJNI6Gjdft3G9EpxajThCiSBA" alt="Prosciutto" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Prosciutto</h3>
+            <span class="text-gold font-sans text-sm">&euro;3.49<small class="text-stone">/100g</small></span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">San Daniele, aged 18 months. Sweet, delicate, melt-in-your-mouth.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+    <!-- Burrata -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxBJ5DBZ4tW9Xewxfkpecjsz0hcCtGnt6Yq0VbCZjKqkxQCrvrdP0PrMeZKD_XxzUvVsawVc_yDELqTp38DamLCtLsa-nl-Ytl_oTAzyXiWDqPsfgLcFkUMe7sss57-_bA-kJ1Ge4l_UUFBd6WyQXk1z7aO1xOiHtJ-I8x5L0jsQrvd_mVXMA6nqc9o5NlCDwraeWS5nnu-t3-UhXMRGCRgylE8NvEWwiuwbvae63hdUkT4XMy91M1M7ZKHb8RjmXwkZ6oxoJle9w" alt="Burrata" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Burrata</h3>
+            <span class="text-gold font-sans text-sm">&euro;3.60</span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">Fresh, creamy burrata 125g. Perfect with sundried tomatoes.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+    <!-- Pecorino -->
+    <div class="bg-smoke p-6 group">
+        <div class="aspect-[4/3] overflow-hidden mb-6 img-zoom">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWS_YJFrcXpvX-Tc6drogX-ky0-EpEhK_oQJchjAK3PcCG7_HDkS5OUXFvRWE1nAVANGLT2ygajBZqyFyziTM01TRbIisKCIDK3rPNPBCqucrE8Gw3FE-r1m5lzT7AJ45JfvNnINudAFwtQ0M71dbVMN2ndZUFCDKiHI5-IEi-kucSMRNr4sZPLN280cOcNtbB4ZTu0XbFD8z8bxyIKEMayCxOK5RlnhDwBl23chYEdIn7Y47jgTHuTDiF43nSskQeWAiEjTT-Qc" alt="Pecorino" class="w-full h-full object-cover" loading="lazy"/>
+        </div>
+        <div class="flex justify-between items-baseline mb-3">
+            <h3 class="text-xl font-serif">Pecorino</h3>
+            <span class="text-gold font-sans text-sm">&euro;3.79<small class="text-stone">/100g</small></span>
+        </div>
+        <p class="text-stone text-sm leading-relaxed mb-6">Romano DOP. Sharp, salty, aged sheep's milk from Lazio.</p>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="text-xs tracking-[0.2em] uppercase text-gold border-b border-gold/30 pb-1 hover:border-gold transition-colors">Order &rarr;</a>
+    </div>
+</div>
+</section>
+
+<!-- Story - Big Split -->
+<section class="relative" id="story">
+<div class="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
+    <div class="relative overflow-hidden">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD29bvnR388-4MHEUZA_Qj4V4TJbI1Tyb_ObBkuZY6NCe_z5dXI1zETgqA9t2GbP-_-IM9fC5IAu64HWNneyMthhWZkz8aIcDnBo8_WK8t-EbEFyZq1Uc0ytE9oL9kvnkjBC7kQ2HGQDAysdahdbkak2UpfbeIcXjAhdZ2DuWsS2WlVNNsQVGunbikECNIusIDu9mWHUTd-imqSWiPxI3mWtP_1KzUaqyREZF6FAye51yrngAmbjsYFPTEKTd3qxPxIxX5Y-3zAFVY" alt="Aperitivo" class="w-full h-full object-cover min-h-[400px]"/>
+        <div class="absolute inset-0 bg-nero/20"></div>
+    </div>
+    <div class="flex flex-col justify-center px-8 md:px-16 lg:px-20 py-16 lg:py-0 bg-smoke">
+        <p class="text-xs tracking-[0.3em] uppercase text-gold mb-6">Our philosophy</p>
+        <h2 class="text-3xl md:text-5xl font-serif leading-tight mb-8">A taste of Italy,<br/><em>in Malta</em></h2>
+        <p class="text-stone text-base md:text-lg leading-relaxed mb-8 max-w-md">
+            Every product is selected for authenticity and quality. From 18-month San Daniele prosciutto to hand-pulled burrata and Pecorino Romano DOP.
+        </p>
+        <div class="space-y-4 text-sm text-stone mb-10">
+            <div class="flex items-center gap-3">
+                <div class="w-1.5 h-1.5 bg-gold rounded-full"></div>
+                <span>Direct from Italian farms</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="w-1.5 h-1.5 bg-gold rounded-full"></div>
+                <span>Authentic recipes &amp; methods</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="w-1.5 h-1.5 bg-gold rounded-full"></div>
+                <span>Sliced fresh daily</span>
+            </div>
+        </div>
+        <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="self-start bg-gold text-nero px-8 py-4 text-sm tracking-[0.15em] uppercase font-medium hover:bg-ivory transition-colors">Browse menu</a>
+    </div>
+</div>
+</section>
+
+<!-- Reviews - Elegant -->
+<section class="py-24 md:py-32 bg-nero">
+<div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+        <p class="text-xs tracking-[0.3em] uppercase text-gold mb-4">Testimonials</p>
+        <h2 class="text-3xl md:text-5xl font-serif">What people say</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="border border-white/10 p-8 relative">
+            <div class="text-gold text-4xl font-serif leading-none mb-6">&ldquo;</div>
+            <p class="text-ivory/80 italic mb-6 leading-relaxed">Best Italian deli on the island. The mortadella is unreal.</p>
+            <div class="flex items-center gap-2 text-gold text-xs mb-3">
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+            </div>
+            <p class="text-stone text-xs tracking-[0.15em] uppercase">Google review</p>
+        </div>
+        <div class="border border-gold/30 p-8 bg-gold/5 relative">
+            <div class="text-gold text-4xl font-serif leading-none mb-6">&ldquo;</div>
+            <p class="text-ivory/80 italic mb-6 leading-relaxed">Finally real Italian products in Malta. Ordering weekly.</p>
+            <div class="flex items-center gap-2 text-gold text-xs mb-3">
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+            </div>
+            <p class="text-stone text-xs tracking-[0.15em] uppercase">Wolt customer</p>
+        </div>
+        <div class="border border-white/10 p-8 relative">
+            <div class="text-gold text-4xl font-serif leading-none mb-6">&ldquo;</div>
+            <p class="text-ivory/80 italic mb-6 leading-relaxed">The panini are next level. Il Mortazza is my go-to.</p>
+            <div class="flex items-center gap-2 text-gold text-xs mb-3">
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+                <span class="material-symbols-outlined text-sm">star</span>
+            </div>
+            <p class="text-stone text-xs tracking-[0.15em] uppercase">Instagram</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- CTA Banner -->
+<section class="relative py-24 md:py-32 overflow-hidden">
+<div class="absolute inset-0 bg-blood"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: url('./brick-texture.jpg'); background-size: 30%; background-repeat: repeat;"></div>
+<div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <p class="text-xs tracking-[0.3em] uppercase text-ivory/60 mb-6">Delivery across Malta</p>
+    <h2 class="text-4xl md:text-7xl font-serif mb-8 text-ivory">Taste Italy<br/><em>at your door</em></h2>
+    <p class="text-ivory/70 text-lg max-w-md mx-auto mb-10">Over 200 Italian products. Carved in quality, delivered in minutes.</p>
+    <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-gold text-nero px-10 py-5 text-sm tracking-[0.15em] uppercase font-medium hover:bg-ivory transition-colors inline-block">Order now on Wolt</a>
+</div>
+</section>
+
+<!-- Location -->
+<section class="py-24 md:py-32 bg-smoke" id="visit">
+<div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <p class="text-xs tracking-[0.3em] uppercase text-gold mb-6">Visit us</p>
+            <h2 class="text-3xl md:text-5xl font-serif mb-10">Find us in<br/><em>Hamrun</em></h2>
+            <div class="space-y-8 text-sm">
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-gold text-xl mt-0.5">location_on</span>
+                    <div>
+                        <p class="text-xs tracking-[0.2em] uppercase text-stone mb-1">Address</p>
+                        <p class="text-ivory">Pjazza Kappillan Muscat, Hamrun, Malta</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-gold text-xl mt-0.5">schedule</span>
+                    <div>
+                        <p class="text-xs tracking-[0.2em] uppercase text-stone mb-1">Hours</p>
+                        <p class="text-ivory">Monday &ndash; Saturday: 09:30 &ndash; 19:00</p>
+                        <p class="text-stone">Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-gold text-xl mt-0.5">call</span>
+                    <div>
+                        <p class="text-xs tracking-[0.2em] uppercase text-stone mb-1">Phone</p>
+                        <p class="text-ivory"><a href="tel:+35627039005" class="hover:text-gold transition-colors">2703 9005</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-10">
+                <a href="https://www.google.com/maps/search/La+Salumeria+Hamrun+Malta" target="_blank" class="bg-gold text-nero px-6 py-3 text-xs tracking-[0.15em] uppercase font-medium hover:bg-ivory transition-colors">Google Maps</a>
+                <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="border border-stone/40 text-stone px-6 py-3 text-xs tracking-[0.15em] uppercase hover:border-gold hover:text-gold transition-colors">Order on Wolt</a>
+            </div>
+        </div>
+        <div class="relative">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsQCqSujan3Tp99oq_wl5oeeT_85Y34hD8klXUFF1a1GDzSK4P7qTDmxdWbzmZEduRkkGNCvm2fcsP19zy3Sj7R18VDaw9V7pmFZ56Ij2_FDLveWPLg0fadipuvDzYtogfbpIE0jpaKfallSvQdco_9wkkg_GfA7-v8I8-fRJOX7a_4Tdse_O2aTniX1TuxS3BFIpWSoJqpXwrAmw65AyotpVN_M95yAaRXOD2dM4OMqfgYixkCZaD5DlijtDwgTTzfsOEg4aK2cU" alt="Map location" class="w-full aspect-[4/3] object-cover" loading="lazy"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-gold p-4 rounded-full shadow-2xl">
+                    <span class="material-symbols-outlined text-nero text-3xl">restaurant_menu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-white/5 py-16 bg-nero">
+<div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div class="md:col-span-2">
+            <h2 class="text-2xl font-serif italic mb-4" style="font-family:'Amsterdam Four',serif;">La Salumeria</h2>
+            <p class="text-stone text-sm leading-relaxed max-w-sm">Authentic Italian deli in Hamrun, Malta. Real flavors, real quality, since day one.</p>
+        </div>
+        <div>
+            <h4 class="text-xs tracking-[0.2em] uppercase text-gold mb-6">Navigate</h4>
+            <ul class="space-y-3 text-sm text-stone">
+                <li><a class="hover:text-gold transition-colors" href="#products">Products</a></li>
+                <li><a class="hover:text-gold transition-colors" href="#story">Our story</a></li>
+                <li><a class="hover:text-gold transition-colors" href="#visit">Visit us</a></li>
+                <li><a class="hover:text-gold transition-colors" href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank">Order on Wolt</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xs tracking-[0.2em] uppercase text-gold mb-6">Contact</h4>
+            <ul class="space-y-3 text-sm text-stone">
+                <li>Pjazza Kappillan Muscat</li>
+                <li>Hamrun, Malta</li>
+                <li><a href="tel:+35627039005" class="hover:text-gold transition-colors">2703 9005</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="h-px bg-white/5 my-12"></div>
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-stone text-xs">
+        <p>&copy; 2024 La Salumeria Malta</p>
+        <p class="tracking-[0.15em] uppercase">Authentic Italian since day one</p>
+    </div>
+</div>
+</footer>
+
+<!-- Mobile sticky CTA -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[calc(100%-2rem)] max-w-sm md:hidden">
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="bg-gold text-nero w-full text-center py-4 text-sm tracking-[0.15em] uppercase font-medium flex items-center justify-center gap-2 shadow-2xl">
+    <span class="material-symbols-outlined text-lg">shopping_cart</span>
+    Order on Wolt
+</a>
+</div>
+
+</body>
+</html>
