@@ -27,6 +27,7 @@
                     "parchment": "#f2e8d5",
                 },
                 fontFamily: {
+                    "title": ["Amsterdam Four", "serif"],
                     "display": ["Ultra", "serif"],
                     "accent": ["UnifrakturMaguntia", "serif"],
                     "body": ["Special Elite", "system-ui", "serif"]
@@ -35,6 +36,15 @@
         },
     }
 </script>
+<style>
+    @font-face {
+        font-family: 'Amsterdam Four';
+        src: url('./fonts/amsterdam-four.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+</style>
 <style type="text/tailwindcss">
     @layer base {
         body {
@@ -86,10 +96,10 @@
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <div class="space-y-8 order-2 lg:order-1">
 <div class="inline-block px-4 py-1 border-4 border-wood-ink font-display text-sm mb-4">AUTHENTIC ITALIAN EXPERIENCE</div>
-<h2 class="text-5xl md:text-7xl font-display leading-[0.9] text-wood-ink">
-    THE REAL<br/>
-    <span class="text-primary">ITALIAN</span><br/>
-    DELI
+<h2 class="text-4xl md:text-7xl font-title leading-[1.1] text-wood-ink">
+    The Real<br/>
+    <span class="text-primary">Italian</span><br/>
+    Deli
 </h2>
 <p class="text-xl md:text-2xl leading-relaxed max-w-md italic">
     Handpicked Italian meats, cheeses, and panini. Direct from family-run farms to your table in Malta.
@@ -117,7 +127,7 @@
 <!-- Featured Products -->
 <section class="space-y-16" id="products">
 <div class="text-center">
-<h3 class="font-display text-3xl md:text-4xl uppercase tracking-[0.2em] mb-4">Our Selection</h3>
+<h3 class="font-title text-3xl md:text-4xl tracking-[0.2em] mb-4">Our Selection</h3>
 <div class="w-48 h-2 bg-primary mx-auto"></div>
 </div>
 
@@ -240,7 +250,7 @@
 <div class="absolute inset-0 hatch-bg opacity-30 -z-10"></div>
 <div class="max-w-3xl space-y-8 bg-parchment p-8 md:p-12 woodcut-border border-wood-ink shadow-2xl rotate-1">
 <span class="material-symbols-outlined text-7xl text-primary">history_edu</span>
-<h3 class="text-3xl md:text-4xl font-display uppercase tracking-tighter">Our Story</h3>
+<h3 class="text-3xl md:text-4xl font-title tracking-tighter">Our Story</h3>
 <p class="text-xl md:text-2xl font-accent leading-loose">
     Every product at La Salumeria is selected for authenticity and quality. Whether you're building a tagliere at home or grabbing a freshly made panino, we bring the real Italian salumeria experience to Hamrun, Malta.
 </p>
@@ -255,7 +265,7 @@
 <!-- Reviews Section -->
 <section class="space-y-12">
 <div class="text-center">
-<h3 class="font-display text-3xl md:text-4xl uppercase tracking-[0.2em] mb-4">What People Say</h3>
+<h3 class="font-title text-3xl md:text-4xl tracking-[0.2em] mb-4">What People Say</h3>
 <div class="w-48 h-2 bg-primary mx-auto"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -304,7 +314,7 @@
 <!-- Quiz Intro -->
 <div id="quiz-intro" class="text-center space-y-6">
 <span class="material-symbols-outlined text-primary text-7xl">quiz</span>
-<h2 class="text-3xl md:text-4xl font-display uppercase tracking-tighter">What Should You Order?</h2>
+<h2 class="text-3xl md:text-4xl font-title tracking-tighter">What Should You Order?</h2>
 <p class="text-lg md:text-xl italic max-w-xl mx-auto">
     Answer 4 quick questions. We'll match you to your perfect Italian bite.
 </p>
@@ -390,7 +400,7 @@
 <div class="absolute -top-10 -right-10 w-64 h-64 bg-wood-ink opacity-10 rotate-45"></div>
 <div class="relative z-10 flex flex-col md:flex-row justify-between items-center gap-12">
 <div class="space-y-4">
-<h2 class="text-4xl md:text-6xl font-display leading-none">TASTE ITALY<br/>AT YOUR DOOR</h2>
+<h2 class="text-4xl md:text-6xl font-title leading-none">Taste Italy<br/>At Your Door</h2>
 <p class="text-lg md:text-xl max-w-md">Quality carved in stone, delivered in minutes. Over 200 Italian products on Wolt.</p>
 </div>
 <div class="bg-wood-ink p-8 md:p-10 border-4 border-parchment text-center -rotate-2 shadow-2xl flex flex-col items-center">
@@ -410,7 +420,7 @@
 <div class="flex-1 space-y-8">
 <div>
 <div class="inline-block px-4 py-1 border-4 border-wood-ink font-display text-sm mb-4 uppercase tracking-widest">Storefront</div>
-<h2 class="text-3xl md:text-4xl font-display uppercase">Visit Us in Hamrun</h2>
+<h2 class="text-3xl md:text-4xl font-title">Visit Us in Hamrun</h2>
 </div>
 <div class="space-y-6 font-display text-sm tracking-wider">
 <div class="flex items-start gap-4">
