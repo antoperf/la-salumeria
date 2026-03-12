@@ -64,7 +64,7 @@
         background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(26, 18, 15, 0.1) 2px, rgba(26, 18, 15, 0.1) 4px);
     }
     .stamp-btn {
-        @apply relative inline-block px-8 py-4 bg-primary text-parchment font-display tracking-widest transition-transform hover:scale-105 active:scale-95;
+        @apply relative inline-block px-8 py-4 bg-primary text-white font-display tracking-widest transition-transform hover:scale-105 active:scale-95;
         box-shadow: 4px 4px 0px #1a120f;
         clip-path: polygon(2% 0%, 98% 1%, 100% 4%, 99% 96%, 97% 100%, 3% 99%, 0% 95%, 1% 5%);
     }
@@ -244,7 +244,11 @@
 </div>
 <p class="text-base italic opacity-90">We also serve Italian aperitivi — the perfect way to start your evening. Spritz, Prosecco, taglieri, and more.</p>
 <p class="text-sm font-display tracking-wider mb-2">Book your aperitivo:</p>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="col-span-2 sm:col-span-1">
+<label class="text-xs font-display tracking-wider opacity-70 block mb-1">Name</label>
+<input type="text" id="aperi-name" placeholder="Your name" class="w-full bg-parchment/30 border-2 border-parchment/60 text-parchment p-2 text-sm font-display rounded-none focus:border-primary outline-none placeholder:text-parchment/50"/>
+</div>
 <div>
 <label class="text-xs font-display tracking-wider opacity-70 block mb-1">People</label>
 <select id="aperi-people" class="w-full bg-parchment/30 border-2 border-parchment/60 text-parchment p-2 text-sm font-display rounded-none focus:border-primary outline-none">
@@ -269,7 +273,6 @@
 <option value="17:30">17:30</option>
 <option value="18:00" selected>18:00</option>
 <option value="18:30">18:30</option>
-<option value="19:00">19:00</option>
 </select>
 </div>
 </div>
@@ -456,7 +459,7 @@
 <div class="w-16 h-16 md:w-24 md:h-24 mb-4 md:mb-6 border-4 border-primary rounded-full flex items-center justify-center">
 <span class="material-symbols-outlined text-4xl md:text-6xl text-primary">electric_moped</span>
 </div>
-<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="stamp-btn bg-primary text-parchment !py-3 !px-8 md:!px-12 text-lg md:text-2xl">Go!</a>
+<a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="stamp-btn bg-primary !py-3 !px-8 md:!px-12 text-lg md:text-2xl">Go!</a>
 <p class="mt-3 md:mt-4 text-xs font-display tracking-widest opacity-60">Via Wolt delivery</p>
 </div>
 </div>
@@ -594,9 +597,15 @@ Order on Wolt
 })();
 
 function bookAperitivo() {
+    const name = document.getElementById('aperi-name').value.trim();
     const people = document.getElementById('aperi-people').value;
     const dateVal = document.getElementById('aperi-date').value;
     const time = document.getElementById('aperi-time').value;
+
+    if (!name) {
+        alert('Please enter your name');
+        return;
+    }
 
     if (!dateVal) {
         alert('Please select a date');
@@ -617,7 +626,7 @@ function bookAperitivo() {
     const dateFormatted = `${dayName} ${selected.getDate()} ${months[selected.getMonth()]}`;
 
     const peopleTxt = people === '1' ? '1 person' : people + (people === '8' ? '+ people' : ' people');
-    const msg = `Ciao! I'd like to book an aperitivo:\n\n\ud83d\udc65 ${peopleTxt}\n\ud83d\udcc5 ${dateFormatted}\n\ud83d\udd50 ${time}\n\nThank you!`;
+    const msg = `Ciao! I'd like to book an aperitivo:\n\n\ud83d\ude4b ${name}\n\ud83d\udc65 ${peopleTxt}\n\ud83d\udcc5 ${dateFormatted}\n\ud83d\udd50 ${time}\n\nThank you!`;
     const url = `https://wa.me/35699545357?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
 }
