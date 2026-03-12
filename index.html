@@ -237,16 +237,45 @@
 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> Authentic recipes &amp; methods</div>
 <div class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">circle</span> Sliced fresh daily</div>
 </div>
-<div class="bg-parchment/20 border-2 border-parchment/40 p-6 space-y-3">
+<div class="bg-parchment/20 border-2 border-parchment/40 p-6 space-y-4">
 <div class="flex items-center gap-3">
 <span class="material-symbols-outlined text-primary text-3xl">local_bar</span>
 <h3 class="font-display text-xl tracking-wider">Aperitivi</h3>
 </div>
 <p class="text-base italic opacity-90">We also serve Italian aperitivi — the perfect way to start your evening. Spritz, Prosecco, taglieri, and more.</p>
-<p class="text-sm font-display tracking-wider">Book your aperitivo:</p>
-<a href="https://wa.me/35699545357?text=Ciao!%20I%27d%20like%20to%20book%20an%20aperitivo" target="_blank" class="stamp-btn bg-parchment !text-wood-ink inline-block !py-3 !px-6 text-sm">
+<p class="text-sm font-display tracking-wider mb-2">Book your aperitivo:</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div>
+<label class="text-xs font-display tracking-wider opacity-70 block mb-1">People</label>
+<select id="aperi-people" class="w-full bg-parchment/30 border-2 border-parchment/60 text-parchment p-2 text-sm font-display rounded-none focus:border-primary outline-none">
+<option value="1">1 person</option>
+<option value="2" selected>2 people</option>
+<option value="3">3 people</option>
+<option value="4">4 people</option>
+<option value="5">5 people</option>
+<option value="6">6 people</option>
+<option value="7">7 people</option>
+<option value="8">8+ people</option>
+</select>
+</div>
+<div>
+<label class="text-xs font-display tracking-wider opacity-70 block mb-1">Date</label>
+<input type="date" id="aperi-date" class="w-full bg-parchment/30 border-2 border-parchment/60 text-parchment p-2 text-sm font-display rounded-none focus:border-primary outline-none [color-scheme:dark]"/>
+</div>
+<div>
+<label class="text-xs font-display tracking-wider opacity-70 block mb-1">Time</label>
+<select id="aperi-time" class="w-full bg-parchment/30 border-2 border-parchment/60 text-parchment p-2 text-sm font-display rounded-none focus:border-primary outline-none">
+<option value="17:00">17:00</option>
+<option value="17:30">17:30</option>
+<option value="18:00" selected>18:00</option>
+<option value="18:30">18:30</option>
+<option value="19:00">19:00</option>
+</select>
+</div>
+</div>
+<button onclick="bookAperitivo()" class="stamp-btn bg-parchment !text-wood-ink inline-block !py-3 !px-6 text-sm cursor-pointer">
 <span class="flex items-center gap-2"><svg class="w-5 h-5 fill-wood-ink" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Book on WhatsApp</span>
-</a>
+</button>
 </div>
 <a href="https://wolt.com/en/mlt/malta/venue/la-salumeria-hamrun" target="_blank" class="stamp-btn bg-parchment !text-wood-ink inline-block">Browse menu</a>
 </div>
@@ -542,6 +571,57 @@
 Order on Wolt
 </a>
 </div>
+
+<!-- Aperitivo Booking Logic -->
+<script>
+(function() {
+    const dateInput = document.getElementById('aperi-date');
+    // Set min to today
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+    // Set max to 2 months from now
+    const maxDate = new Date(today);
+    maxDate.setMonth(maxDate.getMonth() + 2);
+    dateInput.max = `${maxDate.getFullYear()}-${String(maxDate.getMonth() + 1).padStart(2, '0')}-${String(maxDate.getDate()).padStart(2, '0')}`;
+    // Default to next available day (skip Sunday)
+    let defaultDate = new Date(today);
+    defaultDate.setDate(defaultDate.getDate() + 1);
+    if (defaultDate.getDay() === 0) defaultDate.setDate(defaultDate.getDate() + 1);
+    dateInput.value = `${defaultDate.getFullYear()}-${String(defaultDate.getMonth() + 1).padStart(2, '0')}-${String(defaultDate.getDate()).padStart(2, '0')}`;
+})();
+
+function bookAperitivo() {
+    const people = document.getElementById('aperi-people').value;
+    const dateVal = document.getElementById('aperi-date').value;
+    const time = document.getElementById('aperi-time').value;
+
+    if (!dateVal) {
+        alert('Please select a date');
+        return;
+    }
+
+    // Check it's not a Sunday
+    const selected = new Date(dateVal + 'T12:00:00');
+    if (selected.getDay() === 0) {
+        alert('Sorry, we are closed on Sundays. Please pick another day (Mon\u2013Sat).');
+        return;
+    }
+
+    // Format date nicely
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const dayName = days[selected.getDay()];
+    const dateFormatted = `${dayName} ${selected.getDate()} ${months[selected.getMonth()]}`;
+
+    const peopleTxt = people === '1' ? '1 person' : people + (people === '8' ? '+ people' : ' people');
+    const msg = `Ciao! I'd like to book an aperitivo:\n\n\ud83d\udc65 ${peopleTxt}\n\ud83d\udcc5 ${dateFormatted}\n\ud83d\udd50 ${time}\n\nThank you!`;
+    const url = `https://wa.me/35699545357?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+}
+</script>
 
 <!-- Quiz Logic -->
 <script>
